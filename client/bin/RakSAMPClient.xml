@@ -1,0 +1,69 @@
+<!--
+Avalable runmodes:
+	0 = RCON mode,
+	1 = Bare mode (doesn't spawn),
+	2 = Still mode (stays still at spawn position),
+	3 = Normal mode (stays still at a position),
+	4 = Follows a player,
+	5 = Follows a player with a vehicle
+-->
+
+<RakSAMPClient console="0" runmode="3" autorun="0" find="1" select_classid="0" manual_spawn="1"
+			   print_timestamps="0" chatcolor_rgb="0 0 130" clientmsg_rgb="0 130 0" cpalert_rgb="170 0 0"
+			   followplayer="P3ti" followplayerwithvehicleid="295" followXOffset="3.0" followYOffset="0.0" followZOffset="0.0"
+			   imitatechat="" updatestats="1" minfps="20" maxfps="90" clientversion="0.3z">
+
+	<server nickname="root" password="">127.0.0.1:7777</server>
+
+	<intervals spam="150" fakekill="50" lag="20" />
+	<log objects="0" pickups="0" />
+
+	<!-- In normal mode this will be your default position, but if you don't set 'force' to 1, then the server can move you with SetPlayerPos, SetPlayerFacingAngle or SetSpawnInfo. -->
+	<normal_pos position="325.35 2512.09 16.56" rotation="0.0" force="0" />
+
+	<!--
+	Available commands:
+		!exit or !quit: exits client.
+		!reconnect: reconnects the server.
+		!reload: reloads settings.
+		!runmode: sets current runmode.
+		!stats: shows raknet statistics.
+		!players: shows list of players.
+		!login: login to RCON.
+		!rcon: send an RCON command.
+		!goto: go to players position.
+		!gotocp: go to the current checkpoint.
+		!autogotocp: toggle automatic checkpoint teleporter.
+		!imitate: change imitate name.
+		!vlist: shows list of vehicles.
+		!vdeath: send vehicle death notification.
+		!fu: send lost connection packet to server.
+		!spawn: spawns fake player.
+		!pickup: pick up a pickup by ID.
+		!class: select a class.
+		!menusel: selects an item from the GTA menu.
+		!kill: toggle fake kill flooder.
+		!lag: toggle server lagger.
+		!spam: toggle reconnect spammer.
+		!weapon: sets the current weapon in the fake player's hand.
+		!selplayer: sets the followed player's name.
+		!selveh: sets the fake player's vehicle.
+		!pos_x: sets the fake player's position (X).
+		!pos_y: sets the fake player's position (X).
+		!pos_z: sets the fake player's position (X).
+		!follow_x: sets the following offset (X).
+		!follow_y: sets the following offset (Y).
+		!follow_z: sets the following offset (Z).
+		!bulletflood: flood the server with bullet sync packets to the players' positions.
+		!pulsehealth: pulse health & armor.
+		!changename: change the fake player's name and rejoin the game.
+		!dialogresponse: send a dialog response.
+	-->
+
+	<!-- These get called when we successfully connected to a server. -->
+	<!-- <autorun>!selveh 4</autorun> -->
+	
+	<!-- Finds text from the chatbox and says something. -->
+	<!-- <find text="PM from" say="" bk_color="255 255 255" text_color="255 0 0" /> -->
+
+</RakSAMPClient>
